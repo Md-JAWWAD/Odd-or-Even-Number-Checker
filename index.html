@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Checker</title>
+    <script>
+        function checkOddOrEven() {
+            // Prompt user to enter a number
+            let number = prompt("Enter a number:");
+
+            // Check if the input is a valid number
+            if (isNaN(number) || number === "") {
+                alert("Invalid input! Please enter a numeric value.");
+                return;
+            }
+
+            // Convert input to a number
+            number = parseInt(number);
+
+            // Check if the number is odd or even
+            if (number % 2 === 0) {
+                alert("The number " + number + " is even.");
+            } else {
+                alert("The number " + number + " is odd.");
+            }
+
+            // Increment the number by 1
+            number++;
+
+            // Display the new value
+            alert("The new value after incrementing is: " + number);
+        }
+    </script>
+</head>
+<body>
+    <h1>Odd or Even Checker</h1>
+    <button onclick="checkOddOrEven()">Check Number</button>
+</body>
+</html>
